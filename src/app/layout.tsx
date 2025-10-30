@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Header } from "@/components/header";
 
 const tektur = localFont({
   src: "../../src/assets/fonts/tektur_font.ttf",
@@ -21,8 +23,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${tektur.className}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={`${tektur.className}`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
