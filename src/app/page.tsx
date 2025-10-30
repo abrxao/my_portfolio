@@ -22,7 +22,7 @@ function ProfileStat({
   return (
     <div className="text-center">
       <p className="text-2xl font-bold">{value}</p>
-      <p className="text-sm text-muted-foreground">{label}</p>
+      <p className="text-muted-foreground text-sm">{label}</p>
     </div>
   );
 }
@@ -41,7 +41,7 @@ export default async function HomePage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-background p-8">
+    <main className="bg-background flex min-h-screen flex-col items-center justify-center p-8">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-bold">
@@ -54,7 +54,7 @@ export default async function HomePage() {
         </CardHeader>
         <CardContent className="flex flex-col items-center space-y-6">
           {fetchError && (
-            <div className="rounded-md border border-destructive bg-destructive/10 p-4 text-center text-destructive">
+            <div className="border-destructive bg-destructive/10 text-destructive rounded-md border p-4 text-center">
               <p className="font-semibold">Could not load GitHub data</p>
               <p className="text-sm">{fetchError}</p>
             </div>
@@ -62,7 +62,7 @@ export default async function HomePage() {
 
           {userProfile && (
             <>
-              <Avatar className="h-24 w-24 border-2 border-primary">
+              <Avatar className="border-primary h-24 w-24 border-2">
                 <AvatarImage
                   src={userProfile.avatar_url}
                   alt={userProfile.name || userProfile.login}
