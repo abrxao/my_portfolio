@@ -27,16 +27,13 @@ export async function GET() {
   }
 
   try {
-    await apiGitHubClient.get(`/users/${githubUsername}`);
+    // Capture the full response from the GitHub API call
+    const response = await apiGitHubClient.get(`/users/${githubUsername}`);
 
-    return NextResponse.json(
-      {
-        status: "ok",
-        message: "Successfully connected to the GitHub API!",
-      },
-      { status: 200 }
-    );
+    // Return the actual profile data from the response
+    return NextResponse.json(response.data);
   } catch (error) {
+    // The existing error handling is perfect and remains the same
     if (axios.isAxiosError(error) && error.response) {
       return NextResponse.json(
         {
