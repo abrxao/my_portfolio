@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -8,37 +7,14 @@ import {
   CardContainer,
   CardItem,
 } from "@/components/ui/shadcn-io/3d-card";
-import { GitHubProfile } from "@/lib/githubService";
+import { useGitHubProfile } from "@/hooks/use-github-profile";
 import { Button } from "./ui/button";
 import { Skeleton } from "./ui/skeleton";
 
 export function AnimatedProfileCard() {
-  const [profile, setProfile] = useState<GitHubProfile | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { data: profile, isPending, error } = useGitHubProfile();
 
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await fetch("/api/github");
-        if (!response.ok) {
-          throw new Error("Failed to fetch profile from API route.");
-        }
-        const data: GitHubProfile = await response.json();
-        setProfile(data);
-      } catch (err) {
-        setError(
-          err instanceof Error ? err.message : "An unknown error occurred."
-        );
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchProfile();
-  }); // Empty dependency array ensures this runs only once on mount
-
-  if (isLoading) {
+  if (isPending) {
     return <LoadingSkeleton />;
   }
 
@@ -46,7 +22,9 @@ export function AnimatedProfileCard() {
     return (
       <div className="border-destructive bg-destructive/10 text-destructive rounded-md border p-6 text-center">
         <p className="font-semibold">Could not load GitHub data</p>
-        <p className="text-sm">{error || "An unexpected error occurred."}</p>
+        <p className="text-sm">
+          {error?.message || "An unexpected error occurred."}
+        </p>
       </div>
     );
   }
