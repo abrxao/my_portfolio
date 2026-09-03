@@ -9,8 +9,10 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "i18n:extract": "i18next",
-    "i18n:check": "bun run scripts/check-i18n-translations.ts"
+    "i18n:extract": "bunx i18next-cli extract --with-types",
+    "i18n:status": "bunx i18next-cli status",
+    "i18n:types": "bunx i18next-cli types",
+    "i18n:lint": "bunx i18next-cli lint"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
@@ -33,6 +35,7 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@socketsecurity/bun-security-scanner": "^1.1.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -40,7 +43,7 @@
     "eslint": "^9.38.0",
     "eslint-config-next": "^16.0.1",
     "eslint-config-prettier": "^10.1.8",
-    "i18next-parser": "^9.4.0",
+    "i18next-cli": "^1.72.4",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4",
