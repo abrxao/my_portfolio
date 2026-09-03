@@ -1,0 +1,45 @@
+{
+  "githubCard": {
+    "errorTitle": "Não foi possível carregar os dados do GitHub",
+    "unknownError": "Ocorreu um erro inesperado.",
+    "viewLinkedin": "Ver LinkedIn",
+    "visitGithub": "Visitar GitHub"
+  },
+  "header": {
+    "nav": {
+      "experience": "Experiência",
+      "home": "Início",
+      "projects": "Projetos",
+      "publications": "Publicações"
+    },
+    "toggleMenu": "Alternar menu",
+    "underConstruction": "Em construção",
+    "viewLinkedin": "Ver LinkedIn"
+  },
+  "hero": {
+    "badge": "Disponível para novas oportunidades",
+    "description": "Estudante de dupla diplomação em Engenharia, especializado em Cibersegurança & E-payment, apaixonado por construir aplicações full-stack seguras e eficientes.",
+    "downloadCv": "Baixar Currículo",
+    "viewProjects": "Ver Meus Projetos"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "pt-BR": "Português",
+    "toggle": "Alternar idioma"
+  },
+  "meta": {
+    "description": "Estudante de dupla diplomação em Engenharia, especializado em Cibersegurança & E-payment, com experiência prática em desenvolvimento full-stack.",
+    "title": "Abraão Albuquerque | Engenheiro de Software"
+  },
+  "theme": {
+    "dark": "Escuro",
+    "light": "Claro",
+    "system": "Sistema",
+    "toggle": "Alternar tema"
+  },
+  "underConstructionBanner": {
+    "line1": "Em",
+    "line2": "Construção"
+  }
+}

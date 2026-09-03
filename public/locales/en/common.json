@@ -1,0 +1,45 @@
+{
+  "githubCard": {
+    "errorTitle": "Could not load GitHub data",
+    "unknownError": "An unexpected error occurred.",
+    "viewLinkedin": "View LinkedIn",
+    "visitGithub": "Visit GitHub"
+  },
+  "header": {
+    "nav": {
+      "experience": "Experience",
+      "home": "Home",
+      "projects": "Projects",
+      "publications": "Publications"
+    },
+    "toggleMenu": "Toggle menu",
+    "underConstruction": "Under construction",
+    "viewLinkedin": "View LinkedIn"
+  },
+  "hero": {
+    "badge": "Available for new opportunities",
+    "description": "Dual Degree Engineering student specializing in Cybersecurity & E-payment, passionate about building secure and efficient full-stack applications.",
+    "downloadCv": "Download CV",
+    "viewProjects": "View My Projects"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "pt-BR": "Português",
+    "toggle": "Toggle language"
+  },
+  "meta": {
+    "description": "Dual Degree Engineering student specializing in Cybersecurity & E-payment, with hands-on full-stack development experience.",
+    "title": "Abraão Albuquerque | Software Engineer"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System",
+    "toggle": "Toggle theme"
+  },
+  "underConstructionBanner": {
+    "line1": "Under",
+    "line2": "Construction"
+  }
+}

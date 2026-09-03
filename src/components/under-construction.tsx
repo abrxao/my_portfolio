@@ -1,12 +1,18 @@
 import { cn } from "@/lib/utils";
+import { getServerTranslation } from "@/i18n/server";
+import type { Locale } from "@/i18n/settings";
 
 interface UnderConstructionBannerProps {
+  locale: Locale;
   className?: string;
 }
 
-export function UnderConstructionBanner({
+export async function UnderConstructionBanner({
+  locale,
   className,
 }: UnderConstructionBannerProps) {
+  const { t } = await getServerTranslation(locale);
+
   return (
     <div
       className={cn(
@@ -15,8 +21,8 @@ export function UnderConstructionBanner({
       )}
       aria-hidden="true"
     >
-      <p>Under</p>
-      <p>Construction</p>
+      <p>{t("underConstructionBanner.line1")}</p>
+      <p>{t("underConstructionBanner.line2")}</p>
     </div>
   );
 }

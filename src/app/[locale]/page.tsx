@@ -1,13 +1,23 @@
+import { notFound } from "next/navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
 import {
   CursorFollow,
   CursorProvider,
 } from "@/components/ui/shadcn-io/animated-cursor";
 import { UnderConstructionBanner } from "@/components/under-construction";
-export default function HomePage() {
+import { isLocale } from "@/i18n/settings";
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+
   return (
     <main className="relative mx-auto max-w-lvw overflow-x-hidden">
-      <UnderConstructionBanner />
+      <UnderConstructionBanner locale={locale} />
       <CursorProvider>
         <CursorFollow>
           <div className="h-4 w-4 rounded-lg bg-zinc-600 dark:bg-zinc-200">
@@ -15,7 +25,7 @@ export default function HomePage() {
           </div>
         </CursorFollow>
       </CursorProvider>
-      <HeroSection />
+      <HeroSection locale={locale} />
     </main>
   );
 }

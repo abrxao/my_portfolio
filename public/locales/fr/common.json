@@ -1,0 +1,45 @@
+{
+  "githubCard": {
+    "errorTitle": "Impossible de charger les données GitHub",
+    "unknownError": "Une erreur inattendue s'est produite.",
+    "viewLinkedin": "Voir LinkedIn",
+    "visitGithub": "Visiter GitHub"
+  },
+  "header": {
+    "nav": {
+      "experience": "Expérience",
+      "home": "Accueil",
+      "projects": "Projets",
+      "publications": "Publications"
+    },
+    "toggleMenu": "Basculer le menu",
+    "underConstruction": "En construction",
+    "viewLinkedin": "Voir LinkedIn"
+  },
+  "hero": {
+    "badge": "Disponible pour de nouvelles opportunités",
+    "description": "Étudiant en double diplôme d'ingénierie, spécialisé en Cybersécurité & E-paiement, passionné par la création d'applications full-stack sécurisées et efficaces.",
+    "downloadCv": "Télécharger le CV",
+    "viewProjects": "Voir Mes Projets"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "pt-BR": "Português",
+    "toggle": "Changer de langue"
+  },
+  "meta": {
+    "description": "Étudiant en double diplôme d'ingénierie, spécialisé en Cybersécurité & E-paiement, avec une expérience pratique du développement full-stack.",
+    "title": "Abraão Albuquerque | Ingénieur Logiciel"
+  },
+  "theme": {
+    "dark": "Sombre",
+    "light": "Clair",
+    "system": "Système",
+    "toggle": "Changer de thème"
+  },
+  "underConstructionBanner": {
+    "line1": "En",
+    "line2": "Construction"
+  }
+}

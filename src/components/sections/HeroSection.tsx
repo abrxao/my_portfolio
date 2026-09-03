@@ -3,8 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, FileText, GitGraphIcon } from "lucide-react";
 import { BackgroundPattern } from "@/components/background-pattern";
 import Link from "next/link";
+import { getServerTranslation } from "@/i18n/server";
+import type { Locale } from "@/i18n/settings";
 
-export function HeroSection() {
+export async function HeroSection({ locale }: { locale: Locale }) {
+  const { t } = await getServerTranslation(locale);
+
   return (
     <section
       id="home"
@@ -19,22 +23,19 @@ export function HeroSection() {
           asChild
         >
           <Link href="https://www.linkedin.com/in/abrxao" target="_blank">
-            Available for new opportunities{" "}
-            <ArrowUpRight className="ml-1 size-4" />
+            {t("hero.badge")} <ArrowUpRight className="ml-1 size-4" />
           </Link>
         </Badge>
         <h1 className="mt-6 text-4xl font-semibold tracking-tighter sm:text-5xl md:text-6xl md:leading-[1.2] lg:text-7xl">
           Abraão Albuquerque
         </h1>
         <p className="text-foreground/80 mt-6 md:text-lg">
-          Dual Degree Engineering student specializing in Cybersecurity &
-          E-payment, passionate about building secure and efficient full-stack
-          applications.
+          {t("hero.description")}
         </p>
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button asChild size="lg" className="rounded-full text-base">
             <Link href="https://github.com/abrxao" target="_blank">
-              View My Projects <GitGraphIcon />
+              {t("hero.viewProjects")} <GitGraphIcon />
             </Link>
           </Button>
           <Button
@@ -45,7 +46,7 @@ export function HeroSection() {
           >
             <Link href="/CV-Abraao-Albuquerque.pdf" target="_blank" download>
               <FileText className="mr-2 size-5" />
-              Download CV
+              {t("hero.downloadCv")}
             </Link>
           </Button>
         </div>
