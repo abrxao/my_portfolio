@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import "../globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { QueryProvider } from "@/components/providers/query-provider";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { getServerTranslation } from "@/i18n/server";
 import { isLocale, locales } from "@/i18n/settings";
 
@@ -53,11 +53,11 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <QueryProvider>
-            <Header />
+          <Header />
 
-            {children}
-          </QueryProvider>
+          {children}
+
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -1,9 +1,7 @@
 {
-  "githubCard": {
-    "errorTitle": "Could not load GitHub data",
-    "unknownError": "An unexpected error occurred.",
-    "viewLinkedin": "View LinkedIn",
-    "visitGithub": "Visit GitHub"
+  "footer": {
+    "cursorPosition": "Cursor position",
+    "localTime": "Local time"
   },
   "header": {
     "nav": {
