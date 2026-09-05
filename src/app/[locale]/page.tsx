@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { BackgroundPattern } from "@/components/background-pattern";
 import {
   CursorFollow,
   CursorProvider,
@@ -16,7 +18,8 @@ export default async function HomePage({
   if (!isLocale(locale)) notFound();
 
   return (
-    <main className="relative mx-auto max-w-lvw overflow-x-hidden">
+    <main className="relative mx-auto max-w-lvw">
+      <BackgroundPattern />
       <UnderConstructionBanner locale={locale} />
       <CursorProvider>
         <CursorFollow>
@@ -26,6 +29,7 @@ export default async function HomePage({
         </CursorFollow>
       </CursorProvider>
       <HeroSection locale={locale} />
+      <AboutSection />
     </main>
   );
 }

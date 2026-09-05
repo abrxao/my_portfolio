@@ -30,6 +30,20 @@
     "description": "Dual Degree Engineering student specializing in Cybersecurity & E-payment, with hands-on full-stack development experience.",
     "title": "Abraão Albuquerque | Software Engineer"
   },
+  "presentation": {
+    "about": [
+      "Hi, I'm Abraão — a Dual Degree Engineering student between Universidade Federal do Ceará (Brazil) and Ensicaen (France).",
+      "I specialize in Cybersecurity & E-payment, and I like building secure, efficient full-stack applications.",
+      "Currently working with React, Next.js, TypeScript and Python — see what I'm building in the Projects section below."
+    ],
+    "hobbies": [
+      "Playing football",
+      "Riding my bike",
+      "Reading sociology & philosophy",
+      "Gaming"
+    ],
+    "portraitAlt": "Portrait of Abraão Albuquerque"
+  },
   "theme": {
     "dark": "Dark",
     "light": "Light",

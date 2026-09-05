@@ -10,7 +10,7 @@ export const BackgroundPattern = () => {
   const isLightTheme = resolvedTheme === "light";
 
   return (
-    <>
+    <div className="pointer-events-none fixed inset-0 -z-10" aria-hidden="true">
       <DotPattern
         width={20}
         height={20}
@@ -29,6 +29,6 @@ export const BackgroundPattern = () => {
         color={isLightTheme ? "#000" : "#fff"}
         refresh
       />
-    </>
+    </div>
   );
 };

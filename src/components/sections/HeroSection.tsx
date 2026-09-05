@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, FileText, GitGraphIcon } from "lucide-react";
-import { BackgroundPattern } from "@/components/background-pattern";
 import Link from "next/link";
 import { getServerTranslation } from "@/i18n/server";
 import type { Locale } from "@/i18n/settings";
@@ -12,11 +11,9 @@ export async function HeroSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden px-6"
+      className="relative flex min-h-screen w-full items-center justify-center px-6"
     >
-      <BackgroundPattern />
-
-      <div className="relative z-10 mx-auto max-w-3xl text-center">
+      <div className="mx-auto max-w-3xl text-center">
         <Badge
           variant="secondary"
           className="border-border rounded-full py-1"

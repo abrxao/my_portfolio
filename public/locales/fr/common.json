@@ -30,6 +30,20 @@
     "description": "Étudiant en double diplôme d'ingénierie, spécialisé en Cybersécurité & E-paiement, avec une expérience pratique du développement full-stack.",
     "title": "Abraão Albuquerque | Ingénieur Logiciel"
   },
+  "presentation": {
+    "about": [
+      "Salut, je suis Abraão — étudiant en double diplôme d'ingénierie entre l'Universidade Federal do Ceará (Brésil) et l'Ensicaen (France).",
+      "Je me spécialise en Cybersécurité & E-paiement, et j'aime construire des applications full-stack sécurisées et efficaces.",
+      "Je travaille actuellement avec React, Next.js, TypeScript et Python — découvrez mes projets ci-dessous."
+    ],
+    "hobbies": [
+      "Jouer au football",
+      "Faire du vélo",
+      "Lire de la sociologie et de la philosophie",
+      "Jouer aux jeux vidéo"
+    ],
+    "portraitAlt": "Portrait d'Abraão Albuquerque"
+  },
   "theme": {
     "dark": "Sombre",
     "light": "Clair",

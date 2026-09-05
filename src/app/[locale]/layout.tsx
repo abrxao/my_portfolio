@@ -45,8 +45,8 @@ export default async function RootLayout({
   if (!isLocale(locale)) notFound();
 
   return (
-    <html lang={locale}>
-      <body className={`${tektur.className}`}>
+    <html lang={locale} suppressHydrationWarning>
+      <body className={`${tektur.className} overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
