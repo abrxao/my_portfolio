@@ -1,7 +1,8 @@
 {
   "footer": {
     "cursorPosition": "Cursor position",
-    "localTime": "Local time"
+    "localTime": "Local time",
+    "scrollProgress": "Page scroll progress"
   },
   "header": {
     "nav": {
