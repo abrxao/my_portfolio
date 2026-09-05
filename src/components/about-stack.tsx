@@ -56,7 +56,7 @@ export function AboutStack() {
           <WindowCardContent className="p-0">
             <Avatar className="aspect-square size-full rounded-none">
               <AvatarImage
-                src="/portrait.png"
+                src="/portrait.webp"
                 alt={t("presentation.portraitAlt")}
                 className="object-cover"
               />
