@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { BackgroundPattern } from "@/components/background-pattern";
 import { CustomCursor } from "@/components/custom-cursor";
 import { UnderConstructionBanner } from "@/components/under-construction";
@@ -21,6 +22,7 @@ export default async function HomePage({
       <CustomCursor />
       <HeroSection locale={locale} />
       <AboutSection />
+      <ProjectsSection locale={locale} />
     </main>
   );
 }

@@ -45,6 +45,58 @@
     ],
     "portraitAlt": "Retrato de Abraão Albuquerque"
   },
+  "projects": {
+    "imageComingSoon": "Capturas de tela em breve",
+    "items": {
+      "chamberOrchestra": {
+        "imageAlt": "Ilustração de um agente orquestrador central conectado a agentes e notas musicais",
+        "meta": "Estagiário de Engenharia de Software @ Market Pay — (abr-ago)/2026",
+        "pitch": "Um framework de orquestração de agentes de IA que transforma um ticket do Jira direto em um Merge Request pronto para revisão — sem codificação humana no meio do caminho.",
+        "topics": {
+          "agents": {
+            "imageAlt": "Diagrama do pipeline de sete agentes, do blueprint ao Merge Request entregue",
+            "lines": [
+              "Um Architect desenha o blueprint, um Developer o implementa, e um Inspector e um Remediation Developer auditam e corrigem.",
+              "Os agentes de Estilo, Localização e Release Manager fecham o ciclo — estilo, traduções e o próprio Merge Request."
+            ]
+          },
+          "rag": {
+            "lines": [
+              "Os arquivos do projeto são divididos, vetorizados e armazenados em um banco ChromaDB.",
+              "Os agentes buscam o código mais relevante por busca semântica, sincronizada por um job que também remove arquivos apagados."
+            ]
+          },
+          "results": {
+            "imageAlt": "Mockup do painel do Device Manager mostrando os cards de status dos dispositivos",
+            "lines": [
+              "O Device Manager está em produção, substituindo um fluxo manual de reservas.",
+              "13 tickets processados de ponta a ponta — alguns merge requests sem nenhuma intervenção humana."
+            ]
+          },
+          "trigger": {
+            "lines": [
+              "O Jira dispara um webhook assinado assim que um ticket entra em In Progress.",
+              "Um middleware em FastAPI verifica a assinatura SHA-256 e enfileira o workflow de forma assíncrona, para o Jira nunca dar timeout."
+            ]
+          }
+        },
+        "stack": [
+          "Python",
+          "FastAPI",
+          "CrewAI",
+          "Gemini API",
+          "Ollama",
+          "RAG",
+          "Jira Webhooks",
+          "React",
+          "GitLab CI"
+        ],
+        "title": "Chamber Orchestra"
+      }
+    },
+    "punchline": "Vamos falar sobre o que realmente importa.",
+    "punchlineSubtitle": "Problemas reais, entregues em produção — isto é o que eu realmente construí."
+  },
   "sound": {
     "hint": "Ative o som para uma experiência melhor",
     "mute": "Silenciar sons",

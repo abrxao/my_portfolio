@@ -37,9 +37,13 @@ export function AboutStack() {
       >
         <WindowCard>
           <WindowCardHeader>about-me</WindowCardHeader>
-          <WindowCardContent className="space-y-2 pr-12 pb-12 md:pr-24 md:pb-28">
+          <WindowCardContent className="space-y-2 md:pr-24 md:pb-28">
             {lines.map((line, index) => (
-              <WindowCardLine key={index} index={index + 1}>
+              <WindowCardLine
+                key={index}
+                index={index + 1}
+                className="text-sm leading-snug"
+              >
                 {line}
               </WindowCardLine>
             ))}
@@ -82,7 +86,7 @@ export function AboutStack() {
               return (
                 <p
                   key={hobby}
-                  className="flex items-center gap-3 font-mono text-base leading-relaxed"
+                  className="flex items-center gap-3 font-mono text-sm leading-snug"
                 >
                   {Icon && (
                     <Icon
