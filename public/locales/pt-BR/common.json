@@ -45,6 +45,11 @@
     ],
     "portraitAlt": "Retrato de Abraão Albuquerque"
   },
+  "sound": {
+    "hint": "Ative o som para uma experiência melhor",
+    "mute": "Silenciar sons",
+    "unmute": "Ativar sons"
+  },
   "theme": {
     "dark": "Escuro",
     "light": "Claro",

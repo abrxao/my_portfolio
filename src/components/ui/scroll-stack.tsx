@@ -15,7 +15,16 @@ import {
   type MotionValue,
 } from "motion/react";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import { isSoundEnabled } from "@/hooks/use-sound-enabled";
+import { playTone } from "@/lib/sound";
+import { cardEnter, cardExit } from "@/lib/sound-palette";
 import { cn } from "@/lib/utils";
+
+// Shared across every ScrollStackItem instance so a fast scroll that flips
+// several cards within one frame burst collapses to a single audible cue
+// instead of overlapping sounds firing simultaneously.
+let lastStackSoundAt = 0;
+const STACK_SOUND_MIN_GAP_MS = 90;
 
 interface ScrollStackContextValue {
   progress: MotionValue<number>;
@@ -123,6 +132,13 @@ export function ScrollStackItem({
   useMotionValueEvent(progress, "change", (latest) => {
     setIsActive((current) => {
       const next = latest > start;
+      if (next !== current) {
+        const now = Date.now();
+        if (now - lastStackSoundAt > STACK_SOUND_MIN_GAP_MS) {
+          lastStackSoundAt = now;
+          if (isSoundEnabled()) playTone(next ? cardEnter : cardExit);
+        }
+      }
       return next === current ? current : next;
     });
   });

@@ -45,6 +45,11 @@
     ],
     "portraitAlt": "Portrait d'Abraão Albuquerque"
   },
+  "sound": {
+    "hint": "Activez le son pour une meilleure expérience",
+    "mute": "Couper le son",
+    "unmute": "Activer le son"
+  },
   "theme": {
     "dark": "Sombre",
     "light": "Clair",

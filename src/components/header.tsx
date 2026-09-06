@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toogle";
 import { LanguageSwitcher } from "./language-switcher";
+import { SoundToggle } from "./sound-toggle";
 import { useTranslation } from "@/i18n/client";
 
 export function Header() {
@@ -27,6 +28,7 @@ export function Header() {
           </Button>
           <LanguageSwitcher />
           <ThemeToggle />
+          <SoundToggle />
         </div>
       </div>
     </header>
