@@ -13,6 +13,7 @@ import {
   useTransform,
   type MotionValue,
 } from "motion/react";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 
 interface ScrollStackContextValue {
@@ -102,7 +103,14 @@ export function ScrollStackItem({
   const fadeEnd = start + (end - start) * 0.2;
   const rest = index * 16;
 
-  const x = useTransform(progress, [start, fadeEnd], [140 + rest, rest]);
+  // The staggered horizontal offset ("rest") fans the stack out on desktop,
+  // but on narrow viewports there's no slack left in the container to
+  // absorb it, so later windows get clipped past the edge. Drop it on
+  // mobile and let items slide in flush instead.
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const restX = isDesktop ? rest : 0;
+
+  const x = useTransform(progress, [start, fadeEnd], [140 + restX, restX]);
   const elementRef = useRef<HTMLDivElement>(null);
 
   // Opacity is written to the DOM directly on every scroll tick instead of

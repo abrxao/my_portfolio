@@ -15,8 +15,8 @@ import { useTranslation } from "@/i18n/client";
 
 const HOBBY_ICONS = [Goal, Bike, BookOpen, Gamepad2];
 
-// "Break On Through (To the Other Side)" by The Doors.
-const FAVORITE_SONG_SPOTIFY_ID = "6ToM0uwxtPKo9CMpbPGYvM";
+// "Time" by Pink Floyd.
+const FAVORITE_SONG_SPOTIFY_ID = "3TO7bbrUKrOSPGRTB5MeCz";
 
 export function AboutStack() {
   const { t } = useTranslation();
@@ -100,13 +100,13 @@ export function AboutStack() {
 
       <ScrollStackItem
         index={3}
-        className="p-8 md:inset-x-auto md:top-auto md:right-[8%] md:left-auto md:w-[50%]"
+        className="md:inset-x-auto md:top-auto md:right-[8%] md:left-auto md:w-[50%]"
       >
         <WindowCard>
           <WindowCardHeader>favorite-song</WindowCardHeader>
           <WindowCardContent className="p-0">
             <iframe
-              title="Spotify player: Break On Through (To the Other Side) by The Doors"
+              title="Spotify player: Time by Pink Floyd"
               src={`https://open.spotify.com/embed/track/${FAVORITE_SONG_SPOTIFY_ID}?theme=${resolvedTheme === "light" ? 1 : 0}`}
               width="100%"
               height={152}
