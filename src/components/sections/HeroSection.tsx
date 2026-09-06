@@ -11,7 +11,7 @@ export async function HeroSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full items-center justify-center px-6"
+      className="relative flex w-full items-center justify-center px-6 pt-30 md:pt-40"
     >
       <div className="mx-auto max-w-3xl text-center">
         <Badge

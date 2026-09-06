@@ -3,14 +3,15 @@
 import {
   createContext,
   useContext,
+  useEffect,
   useRef,
+  useState,
   type ReactNode,
 } from "react";
 import {
   motion,
   useMotionValueEvent,
   useScroll,
-  useTransform,
   type MotionValue,
 } from "motion/react";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -87,10 +88,12 @@ interface ScrollStackItemProps {
   children: ReactNode;
 }
 
-// Each item owns a slice of the stack's scroll progress. It slides in and
-// snaps to full opacity over the first fraction of its slice, then holds in
-// place (fully readable, not fading with the next item) for the rest of it
-// - the "hold" is the remaining, larger part of the slice.
+// Each item owns a slice of the stack's scroll progress, but doesn't scrub
+// with it: crossing into a slice just flips the item to "active" and lets a
+// fixed, eased transition carry it in, independent of how fast the user
+// scrolled. It holds there - fully readable, not fading with the next item -
+// until the user scrolls back above its own slice, which reverses the same
+// transition to slide it back out.
 export function ScrollStackItem({
   index,
   className,
@@ -99,8 +102,6 @@ export function ScrollStackItem({
   const { progress, count } = useScrollStack();
   const segmentSize = 1 / count;
   const start = index * segmentSize;
-  const end = start + segmentSize;
-  const fadeEnd = start + (end - start) * 0.2;
   const rest = index * 16;
 
   // The staggered horizontal offset ("rest") fans the stack out on desktop,
@@ -110,25 +111,31 @@ export function ScrollStackItem({
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const restX = isDesktop ? rest : 0;
 
-  const x = useTransform(progress, [start, fadeEnd], [140 + restX, restX]);
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  // Opacity is written to the DOM directly on every scroll tick instead of
-  // going through the `style` prop's MotionValue handling. A sticky-pinned
-  // target confuses Motion's hardware-accelerated opacity path (it produces
-  // a fade-in-then-fade-out curve instead of holding at 1), so this bypasses
-  // that path entirely.
+  // Strictly-greater-than matters for the first item: scrollYProgress is
+  // clamped to a minimum of 0, so with `>=` its threshold (0) would already
+  // be satisfied at mount, before the section is even scrolled into view,
+  // and its entrance would play off-screen instead of when the user gets
+  // there.
+  const [isActive, setIsActive] = useState(false);
+  useEffect(() => {
+    setIsActive(progress.get() > start);
+  }, [progress, start]);
   useMotionValueEvent(progress, "change", (latest) => {
-    const t = (latest - start) / (fadeEnd - start);
-    if (elementRef.current) {
-      elementRef.current.style.opacity = String(Math.min(1, Math.max(0, t)));
-    }
+    setIsActive((current) => {
+      const next = latest > start;
+      return next === current ? current : next;
+    });
   });
 
   return (
     <motion.div
-      ref={elementRef}
-      style={{ opacity: 0, x, y: rest }}
+      initial={false}
+      animate={
+        isActive
+          ? { opacity: 1, x: restX, y: rest }
+          : { opacity: 0, x: 140 + restX, y: rest }
+      }
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={cn("absolute inset-x-0 top-0", className)}
     >
       {children}
