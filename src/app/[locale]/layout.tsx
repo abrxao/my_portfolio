@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { getServerTranslation } from "@/i18n/server";
 import { isLocale, locales } from "@/i18n/settings";
+import { Analytics } from "@vercel/analytics/next";
 
 const tektur = localFont({
   src: "../../../src/assets/fonts/tektur_font.ttf",
@@ -46,6 +47,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <Analytics />
       <body className={`${tektur.className} overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
