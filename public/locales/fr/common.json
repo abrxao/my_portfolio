@@ -137,6 +137,52 @@
     "punchline": "Parlons de ce qui compte vraiment.",
     "punchlineSubtitle": "Des problèmes réels, livrés en production — voici ce que j'ai vraiment construit."
   },
+  "science": {
+    "punchline": "Une partie, c'est de la recherche, pas juste du code.",
+    "punchlineSubtitle": "Des travaux évalués par les pairs, de mon passage au GTEL, le groupe de recherche sans fil de l'UFC.",
+    "readPaperCta": "Lire l'article",
+    "items": {
+      "rayTracing": {
+        "title": "Génération de canaux par ray tracing pour la 6G",
+        "meta": "Chercheur de licence @ GTEL, UFC — SBrT 2024",
+        "pitch": "Une méthodologie pour générer des données de canal 6G physiquement réalistes par ray tracing — une vraie rue à Fortaleza, une vraie position de station de base, et des véhicules et piétons en mouvement, plutôt qu'un modèle de canal statistique.",
+        "stack": [
+          "OpenStreetMap",
+          "Blender",
+          "SUMO",
+          "Sionna",
+          "NVIDIA",
+          "Python"
+        ],
+        "topics": {
+          "scenario": {
+            "lines": [
+              "La méthodologie part d'une bounding box réelle extraite d'OpenStreetMap, pas d'un plan synthétique.",
+              "Blender transforme ces données OSM en un modèle 3D de la rue réelle, bâtiments compris."
+            ]
+          },
+          "mobility": {
+            "lines": [
+              "SUMO simule des trajectoires réalistes de véhicules et de piétons dans cette même zone, feux de circulation compris.",
+              "Ces trajectoires deviennent les récepteurs mobiles que le ray tracer suit dans le temps."
+            ]
+          },
+          "channel": {
+            "lines": [
+              "Sionna trace chaque trajet entre émetteur et récepteur à travers la scène 3D pour construire la réponse impulsionnelle du canal.",
+              "Les coordonnées de la station de base viennent directement de la base de données publique de couverture d'Anatel, pas d'un placement hypothétique."
+            ]
+          },
+          "results": {
+            "lines": [
+              "Testée sur une vraie rue de Fortaleza avec une station de base fixe et une autre embarquée sur drone, le nombre de trajets de propagation changeait seconde après seconde.",
+              "C'est tout l'enjeu : un modèle de canal statistique suppose un nombre fixe de trajets — ceci montre pourquoi la recherche 6G dépendante du scénario a besoin du ray tracing."
+            ]
+          }
+        }
+      }
+    }
+  },
   "sound": {
     "hint": "Activez le son pour une meilleure expérience",
     "mute": "Couper le son",

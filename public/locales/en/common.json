@@ -137,6 +137,52 @@
     "punchline": "Let's talk about what really matters.",
     "punchlineSubtitle": "Real problems, shipped to production — here's what I've actually built."
   },
+  "science": {
+    "punchline": "Some of it's research, not just code.",
+    "punchlineSubtitle": "Peer-reviewed work from my time at GTEL, UFC's wireless research group.",
+    "readPaperCta": "Read the paper",
+    "items": {
+      "rayTracing": {
+        "title": "Ray Tracing Channel Generation for 6G",
+        "meta": "Undergraduate Researcher @ GTEL, UFC — SBrT 2024",
+        "pitch": "A methodology for generating physically accurate 6G channel data with ray tracing — a real street in Fortaleza, a real base-station position, and moving vehicles and pedestrians, instead of a statistical channel model.",
+        "stack": [
+          "OpenStreetMap",
+          "Blender",
+          "SUMO",
+          "Sionna",
+          "NVIDIA",
+          "Python"
+        ],
+        "topics": {
+          "scenario": {
+            "lines": [
+              "The methodology starts from a real bounding box pulled from OpenStreetMap, not a synthetic layout.",
+              "Blender turns that OSM data into a 3D model of the actual street, buildings included."
+            ]
+          },
+          "mobility": {
+            "lines": [
+              "SUMO simulates realistic vehicle and pedestrian trajectories inside that same area, traffic lights included.",
+              "Those trajectories become the moving receivers the ray tracer tracks over time."
+            ]
+          },
+          "channel": {
+            "lines": [
+              "Sionna ray-traces every path between transmitter and receiver across the 3D scene to build the channel impulse response.",
+              "The base station's coordinates came straight from Anatel's public coverage database, not a hypothetical placement."
+            ]
+          },
+          "results": {
+            "lines": [
+              "Tested on a real street in Fortaleza with a fixed base station and a UAV-mounted one, the number of propagation paths kept shifting second to second.",
+              "That's the point: a statistical channel model assumes a fixed number of paths — this shows why scenario-dependent 6G research needs ray tracing instead."
+            ]
+          }
+        }
+      }
+    }
+  },
   "sound": {
     "hint": "Activate sound for a better experience",
     "mute": "Mute sounds",

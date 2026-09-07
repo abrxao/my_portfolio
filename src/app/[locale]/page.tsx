@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ScienceSection } from "@/components/sections/ScienceSection";
 import { BackgroundPattern } from "@/components/background-pattern";
 import { CustomCursor } from "@/components/custom-cursor";
 import { UnderConstructionBanner } from "@/components/under-construction";
@@ -23,6 +24,7 @@ export default async function HomePage({
       <HeroSection locale={locale} />
       <AboutSection />
       <ProjectsSection locale={locale} />
+      <ScienceSection locale={locale} />
     </main>
   );
 }
