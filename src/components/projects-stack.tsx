@@ -39,7 +39,7 @@ export function ProjectsStack() {
   ) as string[];
 
   return (
-    <ScrollStack count={5} className="md:min-h-[620px] md:max-w-5xl">
+    <ScrollStack count={5} className="md:min-h-155 md:max-w-5xl">
       {/* Main card: presentation of the project. */}
       <ScrollStackItem
         index={0}
