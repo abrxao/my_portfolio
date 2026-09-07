@@ -193,9 +193,5 @@
     "light": "Light",
     "system": "System",
     "toggle": "Toggle theme"
-  },
-  "underConstructionBanner": {
-    "line1": "Under",
-    "line2": "Construction"
   }
 }
