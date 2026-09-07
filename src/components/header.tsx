@@ -11,7 +11,7 @@ export function Header() {
   const { t, locale } = useTranslation();
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b">
+    <header className="fixed top-0 left-0 z-50 w-full">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link
           href={`/${locale}#home`}
