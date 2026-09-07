@@ -92,6 +92,46 @@
           "GitLab CI"
         ],
         "title": "Chamber Orchestra"
+      },
+      "seelect": {
+        "title": "SEELECT",
+        "meta": "Coordenador de Logística @ SEELECT — Semana Acadêmica — 2023–2024",
+        "pitch": "Como coordenador de logística de uma semana acadêmica com mais de 200 participantes, eu mesmo construí a plataforma de inscrição — um app full-stack para gerenciar inscrições, pagamentos e presença ao vivo, usado no dia a dia por uma equipe de 10 pessoas.",
+        "stack": [
+          "React",
+          "Node.js",
+          "Django",
+          "SQLite"
+        ],
+        "topics": {
+          "api": {
+            "lines": [
+              "Um frontend em React se comunica com uma API REST em Django que cuida da autenticação segura e da inscrição dos participantes.",
+              "O pagamento da taxa de inscrição acontece direto no fluxo de inscrição — sem dinheiro em espécie, sem controle manual em planilha."
+            ]
+          },
+          "infra": {
+            "lines": [
+              "O evento rodava com orçamento de estudante e sem fins lucrativos, então hospedagem paga na nuvem estava fora de cogitação.",
+              "Nós mesmos hospedamos o backend em Django em infraestrutura local própria para manter tudo 100% gratuito."
+            ]
+          },
+          "checkin": {
+            "lines": [
+              "Durante o evento, a mesma plataforma controlava presença em tempo real conforme a equipe registrava os participantes em cada sessão.",
+              "Os dados de presença também serviam de referência para saber quem tinha direito ao certificado."
+            ],
+            "imageAlt": "Ilustração de um nó central de check-in conectado a uma grade de nós de participantes, alguns acesos para indicar presença"
+          },
+          "certificates": {
+            "lines": [
+              "No fim da semana, um script gera automaticamente um certificado de participação para cada um dos 200+ participantes.",
+              "O que antes levava horas de trabalho manual agora roda em minutos."
+            ],
+            "imageAlt": "Ilustração de um hub emitindo ícones de documentos em formato de certificado, dispostos em grade"
+          }
+        },
+        "imageAlt": "Logo do SEELECT: um glifo estilizado de play/avançar dentro de um anel em gradiente azul"
       }
     },
     "punchline": "Vamos falar sobre o que realmente importa.",

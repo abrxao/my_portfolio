@@ -1,4 +1,5 @@
 import { ProjectsStack } from "@/components/projects-stack";
+import { SeelectStack } from "@/components/seelect-stack";
 import { getServerTranslation } from "@/i18n/server";
 import type { Locale } from "@/i18n/settings";
 
@@ -16,6 +17,7 @@ export async function ProjectsSection({ locale }: { locale: Locale }) {
         </p>
       </div>
       <ProjectsStack />
+      <SeelectStack />
     </section>
   );
 }

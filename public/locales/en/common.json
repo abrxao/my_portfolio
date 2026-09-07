@@ -92,6 +92,46 @@
           "GitLab CI"
         ],
         "title": "Chamber Orchestra"
+      },
+      "seelect": {
+        "title": "SEELECT",
+        "meta": "Logistics Coordinator @ SEELECT — Semana Acadêmica — 2023–2024",
+        "pitch": "As logistics coordinator for a 200+ person academic week, I built the registration platform myself — a full-stack app to handle sign-ups, payments and live attendance, run day-to-day by a 10-person team.",
+        "stack": [
+          "React",
+          "Node.js",
+          "Django",
+          "SQLite"
+        ],
+        "topics": {
+          "api": {
+            "lines": [
+              "A React frontend talks to a Django REST API that handles secure participant authentication and registration.",
+              "Payment for registration fees happens directly in the sign-up flow — no cash, no spreadsheet tracking by hand."
+            ]
+          },
+          "infra": {
+            "lines": [
+              "The event ran on a student budget with no money purpose, so paid cloud hosting was off the table.",
+              "We self-hosted the Django backend on our own local infrastructure to keep it 100% free."
+            ]
+          },
+          "checkin": {
+            "lines": [
+              "During the event, the same platform tracked attendance in real time as the team checked participants into each session.",
+              "Presence data doubled as the source of truth for who'd earned a certificate."
+            ],
+            "imageAlt": "Illustration of a central check-in node connected to a grid of participant nodes, some lit to show attendance"
+          },
+          "certificates": {
+            "lines": [
+              "At the end of the week, a script auto-generates a completion certificate for each of the 200+ participants.",
+              "What used to take hours of manual work now runs in minutes."
+            ],
+            "imageAlt": "Illustration of a hub emitting certificate-shaped document icons in a grid"
+          }
+        },
+        "imageAlt": "SEELECT logo: a stylized play/forward glyph inside a blue gradient ring"
       }
     },
     "punchline": "Let's talk about what really matters.",

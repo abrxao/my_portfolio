@@ -92,6 +92,46 @@
           "GitLab CI"
         ],
         "title": "Chamber Orchestra"
+      },
+      "seelect": {
+        "title": "SEELECT",
+        "meta": "Coordinateur logistique @ SEELECT — Semana Acadêmica — 2023–2024",
+        "pitch": "En tant que coordinateur logistique d'une semaine académique de 200+ participants, j'ai construit moi-même la plateforme d'inscription — une application full-stack pour gérer les inscriptions, les paiements et la présence en direct, utilisée au quotidien par une équipe de 10 personnes.",
+        "stack": [
+          "React",
+          "Node.js",
+          "Django",
+          "SQLite"
+        ],
+        "topics": {
+          "api": {
+            "lines": [
+              "Un frontend React communique avec une API REST Django qui gère l'authentification sécurisée et l'inscription des participants.",
+              "Le paiement des frais d'inscription se fait directement dans le parcours d'inscription — plus d'espèces, plus de suivi à la main sur une feuille de calcul."
+            ]
+          },
+          "infra": {
+            "lines": [
+              "L'événement tournait avec un budget étudiant et sans but lucratif, l'hébergement cloud payant était donc exclu.",
+              "Nous avons auto-hébergé le backend Django sur notre propre infrastructure locale pour rester à 100% gratuit."
+            ]
+          },
+          "checkin": {
+            "lines": [
+              "Pendant l'événement, la même plateforme suivait les présences en temps réel à mesure que l'équipe enregistrait les participants à chaque session.",
+              "Les données de présence servaient aussi de référence pour savoir qui avait droit à un certificat."
+            ],
+            "imageAlt": "Illustration d'un nœud central de pointage relié à une grille de nœuds participants, certains allumés pour indiquer la présence"
+          },
+          "certificates": {
+            "lines": [
+              "En fin de semaine, un script génère automatiquement un certificat de participation pour chacun des 200+ participants.",
+              "Ce qui prenait des heures de travail manuel se fait maintenant en quelques minutes."
+            ],
+            "imageAlt": "Illustration d'un hub émettant des icônes de documents en forme de certificat, disposées en grille"
+          }
+        },
+        "imageAlt": "Logo SEELECT : un glyphe de lecture/avance stylisé dans un anneau en dégradé bleu"
       }
     },
     "punchline": "Parlons de ce qui compte vraiment.",
