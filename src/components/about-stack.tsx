@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Bike, BookOpen, Gamepad2, Goal } from "lucide-react";
+import { useSyncExternalStore } from "react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ScrollStack, ScrollStackItem } from "@/components/ui/scroll-stack";
@@ -15,19 +16,32 @@ import { useTranslation } from "@/i18n/client";
 
 const HOBBY_ICONS = [Goal, Bike, BookOpen, Gamepad2];
 
+// True only once mounted on the client - lets us skip resolvedTheme during
+// SSR so the server-rendered iframe src can't disagree with the client's
+// first render.
+const noopSubscribe = () => () => {};
+function useMounted() {
+  return useSyncExternalStore(
+    noopSubscribe,
+    () => true,
+    () => false
+  );
+}
+
 // "Time" by Pink Floyd.
 const FAVORITE_SONG_SPOTIFY_ID = "3TO7bbrUKrOSPGRTB5MeCz";
 
 export function AboutStack() {
   const { t } = useTranslation();
   const { resolvedTheme } = useTheme();
+  const mounted = useMounted();
   const lines = t("presentation.about", { returnObjects: true }) as string[];
   const hobbies = t("presentation.hobbies", {
     returnObjects: true,
   }) as string[];
 
   return (
-    <ScrollStack count={4} className="md:min-h-[560px] md:max-w-4xl">
+    <ScrollStack count={4} className="md:min-h-140 md:max-w-4xl">
       {/* Description: left, ~60% width on desktop. Extra right/bottom
           padding leaves room for the overlay cards below to sit on top of
           it without covering the text. */}
@@ -111,7 +125,7 @@ export function AboutStack() {
           <WindowCardContent className="p-0">
             <iframe
               title="Spotify player: Time by Pink Floyd"
-              src={`https://open.spotify.com/embed/track/${FAVORITE_SONG_SPOTIFY_ID}?theme=${resolvedTheme === "light" ? 1 : 0}`}
+              src={`https://open.spotify.com/embed/track/${FAVORITE_SONG_SPOTIFY_ID}?theme=${mounted && resolvedTheme === "light" ? 1 : 0}`}
               width="100%"
               height={152}
               style={{ borderRadius: 12 }}
