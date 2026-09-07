@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ScienceSection } from "@/components/sections/ScienceSection";
+import { SkillsSection } from "@/components/sections/SkillsSection";
 import { BackgroundPattern } from "@/components/background-pattern";
 import { CustomCursor } from "@/components/custom-cursor";
 import { isLocale } from "@/i18n/settings";
@@ -23,6 +24,7 @@ export default async function HomePage({
       <AboutSection />
       <ProjectsSection locale={locale} />
       <ScienceSection locale={locale} />
+      <SkillsSection locale={locale} />
     </main>
   );
 }

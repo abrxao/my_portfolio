@@ -3,6 +3,19 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --animate-skills-spin: skills-spin 40s linear infinite;
+}
+
+@keyframes skills-spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

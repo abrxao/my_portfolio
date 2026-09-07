@@ -144,6 +144,7 @@
     "items": {
       "rayTracing": {
         "title": "Ray Tracing Channel Generation for 6G",
+        "imageAlt": "Illustration of a rooftop antenna emitting glowing signal rays across stylized city buildings toward a mobile receiver",
         "meta": "Undergraduate Researcher @ GTEL, UFC — SBrT 2024",
         "pitch": "A methodology for generating physically accurate 6G channel data with ray tracing — a real street in Fortaleza, a real base-station position, and moving vehicles and pedestrians, instead of a statistical channel model.",
         "stack": [
@@ -182,6 +183,10 @@
         }
       }
     }
+  },
+  "skills": {
+    "punchline": "The toolbox behind all of it.",
+    "punchlineSubtitle": "Languages, frameworks and infra I reach for when building any of the above."
   },
   "sound": {
     "hint": "Activate sound for a better experience",

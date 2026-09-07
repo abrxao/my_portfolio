@@ -144,6 +144,7 @@
     "items": {
       "rayTracing": {
         "title": "Geração de canais por ray tracing para 6G",
+        "imageAlt": "Ilustração de uma antena no topo de um prédio emitindo raios de sinal luminosos por edifícios estilizados até um receptor móvel",
         "meta": "Pesquisador de Graduação @ GTEL, UFC — SBrT 2024",
         "pitch": "Uma metodologia para gerar dados de canal 6G fisicamente realistas usando ray tracing — uma rua real em Fortaleza, a posição real de uma estação-base, e veículos e pedestres em movimento, em vez de um modelo de canal estatístico.",
         "stack": [
@@ -182,6 +183,10 @@
         }
       }
     }
+  },
+  "skills": {
+    "punchline": "A caixa de ferramentas por trás de tudo isso.",
+    "punchlineSubtitle": "Linguagens, frameworks e infraestrutura que uso para construir tudo isso."
   },
   "sound": {
     "hint": "Ative o som para uma experiência melhor",

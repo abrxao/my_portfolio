@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { ScrollStack, ScrollStackItem } from "@/components/ui/scroll-stack";
@@ -41,6 +42,16 @@ export function RayTracingStack() {
         <WindowCard>
           <WindowCardHeader>ray-tracing-6g.py</WindowCardHeader>
           <WindowCardContent className="space-y-3">
+            <div className="border-border/60 relative h-20 w-full overflow-hidden rounded-md border md:h-24">
+              <Image
+                src="/ray-tracing-1.webp"
+                alt={t("science.items.rayTracing.imageAlt")}
+                fill
+                sizes="(min-width: 768px) 500px, 90vw"
+                className="zoom-150 object-cover"
+              />
+            </div>
+
             <div>
               <h3 className="text-lg font-semibold tracking-tight md:text-xl">
                 {t("science.items.rayTracing.title")}
