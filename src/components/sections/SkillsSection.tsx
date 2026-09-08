@@ -1,4 +1,4 @@
-import { SkillsDisk } from "@/components/skills-disk";
+import { SkillsDisk } from "@/components/skill-disk";
 import { getServerTranslation } from "@/i18n/server";
 import type { Locale } from "@/i18n/settings";
 

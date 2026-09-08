@@ -16,7 +16,7 @@ function pad(value: number) {
 // How long scrolling must be idle before the bar is considered "settled".
 // Scrolling and stopping twice within this window just reschedules the
 // wait, so the bar only ever catches up once, covering the net movement.
-const SCROLL_SETTLE_MS = 400;
+const SCROLL_SETTLE_MS = 200;
 const MIN_ANIMATE_DELTA = 2;
 
 function ScrollProgressLine({ progress }: { progress: number }) {
