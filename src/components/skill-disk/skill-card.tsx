@@ -19,7 +19,10 @@ export function SkillCard({
         )}
         style={
           color
-            ? { borderColor: color, boxShadow: `0 0 14px ${color}66` }
+            ? {
+                borderColor: color,
+                boxShadow: `0 0 14px color-mix(in oklch, ${color} 40%, transparent)`,
+              }
             : undefined
         }
       >
