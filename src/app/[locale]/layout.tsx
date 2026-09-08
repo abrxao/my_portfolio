@@ -15,6 +15,13 @@ const tektur = localFont({
   variable: "--font-tektur",
 });
 
+const siteUrl = "https://abrxao.dev.br";
+const ogLocales: Record<(typeof locales)[number], string> = {
+  en: "en_US",
+  "pt-BR": "pt_BR",
+  fr: "fr_FR",
+};
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -28,10 +35,40 @@ export async function generateMetadata({
   if (!isLocale(locale)) notFound();
   const { t } = await getServerTranslation(locale);
 
+  const title = t("meta.title");
+  const description = t("meta.description");
+
   return {
-    title: t("meta.title"),
-    description: t("meta.description"),
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: title,
+      template: `%s | ${title}`,
+    },
+    description,
     authors: [{ name: "Abraão Albuquerque" }],
+    alternates: {
+      canonical: `/${locale}`,
+      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/${locale}`,
+      siteName: "Abraão Albuquerque",
+      images: ["/portrait.webp"],
+      locale: ogLocales[locale],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/portrait.webp"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
