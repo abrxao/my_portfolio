@@ -4,6 +4,11 @@
     "localTime": "Heure locale",
     "scrollProgress": "Progression de la page"
   },
+  "gallery": {
+    "goToImage": "Aller à l'image {{index}}",
+    "nextImage": "Image suivante",
+    "previousImage": "Image précédente"
+  },
   "header": {
     "nav": {
       "experience": "Expérience",
@@ -31,6 +36,32 @@
     "description": "Étudiant en double diplôme d'ingénierie, spécialisé en Cybersécurité & E-paiement, avec une expérience pratique du développement full-stack.",
     "title": "Abraão Albuquerque | Ingénieur Logiciel"
   },
+  "otherProjects": {
+    "punchline": "Il y en a d'autres en réserve.",
+    "punchlineSubtitle": "Recherche, projets personnels, et ce qui arrive ensuite.",
+    "readPaperCta": "Lire l'article",
+    "items": {
+      "rayTracing": {
+        "title": "Génération de canaux par ray tracing pour la 6G",
+        "imageAlt": "Illustration d'une antenne sur un toit émettant des rayons de signal lumineux à travers des bâtiments stylisés vers un récepteur mobile",
+        "meta": "Chercheur de licence @ GTEL, UFC — SBrT 2024",
+        "pitch": "Une méthodologie pour générer des données de canal 6G physiquement réalistes par ray tracing — une vraie rue à Fortaleza, une vraie position de station de base, et des véhicules et piétons en mouvement, plutôt qu'un modèle de canal statistique.",
+        "stack": [
+          "OpenStreetMap",
+          "Blender",
+          "SUMO",
+          "Sionna",
+          "NVIDIA",
+          "Python"
+        ]
+      },
+      "nextProject": {
+        "title": "Prochain projet",
+        "meta": "En cours",
+        "pitch": "Quelque chose de nouveau prend forme ici — les détails restent secrets pour l'instant. Revenez bientôt."
+      }
+    }
+  },
   "presentation": {
     "about": [
       "Salut, je suis Abraão — étudiant en double diplôme d'ingénierie entre l'Universidade Federal do Ceará (Brésil) et l'Ensicaen (France).",
@@ -46,7 +77,6 @@
     "portraitAlt": "Portrait d'Abraão Albuquerque"
   },
   "projects": {
-    "imageComingSoon": "Captures d'écran à venir",
     "items": {
       "chamberOrchestra": {
         "imageAlt": "Illustration d'un agent orchestrateur central relié à des agents et notes de musique",
@@ -93,6 +123,46 @@
         ],
         "title": "Chamber Orchestra"
       },
+      "boJogar": {
+        "title": "BóJogar",
+        "imageAlt": "Capture d'écran de l'application iOS BóJogar montrant le fil des événements sportifs de l'utilisateur",
+        "meta": "App iOS + API @ Apple Developer Academy",
+        "pitch": "Une application d'événements sportifs pour ceux qui viennent d'emménager dans une nouvelle ville — un fil de matchs à proximité à rejoindre, et les outils pour créer et gérer les siens. L'application SwiftUI et son API Node.js, construites de bout en bout en solo.",
+        "stack": [
+          "SwiftUI",
+          "Node.js",
+          "TypeScript",
+          "MongoDB"
+        ],
+        "topics": {
+          "scenario": {
+            "lines": [
+              "Maria vient d'emménager dans une nouvelle ville. Elle adore le sport, mais ne connaît personne et ignore où les habitants jouent.",
+              "Aucune liste des terrains, pistes ou stades à proximité, et aucun moyen simple de trouver des gens qui partagent son sport."
+            ]
+          },
+          "audience": {
+            "lines": [
+              "Des personnes comme Maria : nouvellement arrivées et cherchant à reprendre leur sport.",
+              "Des groupes qui se retrouvent régulièrement, des organismes publics ouvrant des événements communautaires, et des commerces locaux en quête de visibilité."
+            ]
+          },
+          "feed": {
+            "lines": [
+              "Un fil d'événements sportifs à proximité de l'utilisateur, avec la possibilité de créer et gérer les siens en un geste.",
+              "Chaque événement garde sa propre liste de participants, du match improvisé au tournoi organisé."
+            ]
+          },
+          "screens": {
+            "images": [
+              "Écran d'accueil de BóJogar listant les événements sportifs créés et rejoints par l'utilisateur",
+              "Écran des événements actifs à proximité, avec une barre de recherche",
+              "Écran de détail d'un événement montrant le lieu, l'horaire et la liste des participants",
+              "Écran des lieux de BóJogar montrant les terrains de sport sur une carte avec leurs événements programmés"
+            ]
+          }
+        }
+      },
       "seelect": {
         "title": "SEELECT",
         "meta": "Coordinateur logistique @ SEELECT — Semana Acadêmica — 2023–2024",
@@ -136,53 +206,6 @@
     },
     "punchline": "Parlons de ce qui compte vraiment.",
     "punchlineSubtitle": "Des problèmes réels, livrés en production — voici ce que j'ai vraiment construit."
-  },
-  "science": {
-    "punchline": "Une partie, c'est de la recherche, pas juste du code.",
-    "punchlineSubtitle": "Des travaux évalués par les pairs, de mon passage au GTEL, le groupe de recherche sans fil de l'UFC.",
-    "readPaperCta": "Lire l'article",
-    "items": {
-      "rayTracing": {
-        "title": "Génération de canaux par ray tracing pour la 6G",
-        "imageAlt": "Illustration d'une antenne sur un toit émettant des rayons de signal lumineux à travers des bâtiments stylisés vers un récepteur mobile",
-        "meta": "Chercheur de licence @ GTEL, UFC — SBrT 2024",
-        "pitch": "Une méthodologie pour générer des données de canal 6G physiquement réalistes par ray tracing — une vraie rue à Fortaleza, une vraie position de station de base, et des véhicules et piétons en mouvement, plutôt qu'un modèle de canal statistique.",
-        "stack": [
-          "OpenStreetMap",
-          "Blender",
-          "SUMO",
-          "Sionna",
-          "NVIDIA",
-          "Python"
-        ],
-        "topics": {
-          "scenario": {
-            "lines": [
-              "La méthodologie part d'une bounding box réelle extraite d'OpenStreetMap, pas d'un plan synthétique.",
-              "Blender transforme ces données OSM en un modèle 3D de la rue réelle, bâtiments compris."
-            ]
-          },
-          "mobility": {
-            "lines": [
-              "SUMO simule des trajectoires réalistes de véhicules et de piétons dans cette même zone, feux de circulation compris.",
-              "Ces trajectoires deviennent les récepteurs mobiles que le ray tracer suit dans le temps."
-            ]
-          },
-          "channel": {
-            "lines": [
-              "Sionna trace chaque trajet entre émetteur et récepteur à travers la scène 3D pour construire la réponse impulsionnelle du canal.",
-              "Les coordonnées de la station de base viennent directement de la base de données publique de couverture d'Anatel, pas d'un placement hypothétique."
-            ]
-          },
-          "results": {
-            "lines": [
-              "Testée sur une vraie rue de Fortaleza avec une station de base fixe et une autre embarquée sur drone, le nombre de trajets de propagation changeait seconde après seconde.",
-              "C'est tout l'enjeu : un modèle de canal statistique suppose un nombre fixe de trajets — ceci montre pourquoi la recherche 6G dépendante du scénario a besoin du ray tracing."
-            ]
-          }
-        }
-      }
-    }
   },
   "skills": {
     "punchline": "La boîte à outils derrière tout ça.",

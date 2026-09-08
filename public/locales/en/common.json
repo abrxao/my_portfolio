@@ -4,6 +4,11 @@
     "localTime": "Local time",
     "scrollProgress": "Page scroll progress"
   },
+  "gallery": {
+    "goToImage": "Go to image {{index}}",
+    "nextImage": "Next image",
+    "previousImage": "Previous image"
+  },
   "header": {
     "nav": {
       "experience": "Experience",
@@ -31,6 +36,32 @@
     "description": "Dual Degree Engineering student specializing in Cybersecurity & E-payment, with hands-on full-stack development experience.",
     "title": "Abraão Albuquerque | Software Engineer"
   },
+  "otherProjects": {
+    "punchline": "There's more where that came from.",
+    "punchlineSubtitle": "Research, side projects, and whatever's brewing next.",
+    "readPaperCta": "Read the paper",
+    "items": {
+      "rayTracing": {
+        "title": "Ray Tracing Channel Generation for 6G",
+        "imageAlt": "Illustration of a rooftop antenna emitting glowing signal rays across stylized city buildings toward a mobile receiver",
+        "meta": "Undergraduate Researcher @ GTEL, UFC — SBrT 2024",
+        "pitch": "A methodology for generating physically accurate 6G channel data with ray tracing — a real street in Fortaleza, a real base-station position, and moving vehicles and pedestrians, instead of a statistical channel model.",
+        "stack": [
+          "OpenStreetMap",
+          "Blender",
+          "SUMO",
+          "Sionna",
+          "NVIDIA",
+          "Python"
+        ]
+      },
+      "nextProject": {
+        "title": "Next Build",
+        "meta": "In the works",
+        "pitch": "Something new is taking shape here — details are still under wraps. Check back soon."
+      }
+    }
+  },
   "presentation": {
     "about": [
       "Hi, I'm Abraão — a Dual Degree Engineering student between Universidade Federal do Ceará (Brazil) and Ensicaen (France).",
@@ -46,7 +77,6 @@
     "portraitAlt": "Portrait of Abraão Albuquerque"
   },
   "projects": {
-    "imageComingSoon": "Screenshots coming soon",
     "items": {
       "chamberOrchestra": {
         "imageAlt": "Illustration of a central AI orchestrator agent connected to smaller agent and music-note nodes",
@@ -93,6 +123,46 @@
         ],
         "title": "Chamber Orchestra"
       },
+      "boJogar": {
+        "title": "BóJogar",
+        "imageAlt": "Screenshot of the BóJogar iOS app's home feed listing a user's sports events",
+        "meta": "iOS App + API @ Apple Developer Academy",
+        "pitch": "A sports-events app for people who just moved somewhere new — a feed of nearby games to join, and the tools to create and run your own. The SwiftUI app and its Node.js API, built end-to-end solo.",
+        "stack": [
+          "SwiftUI",
+          "Node.js",
+          "TypeScript",
+          "MongoDB"
+        ],
+        "topics": {
+          "scenario": {
+            "lines": [
+              "Maria just moved to a new city. She loves sports, but knows no one and has no idea where locals play.",
+              "No listing of nearby courts, tracks or fields, and no easy way to find people who share her sport."
+            ]
+          },
+          "audience": {
+            "lines": [
+              "People like Maria: newcomers looking for a way back into their sport.",
+              "Regular pickup groups, public agencies opening community events, and local businesses after more visibility."
+            ]
+          },
+          "feed": {
+            "lines": [
+              "A feed of sports events near the user, with one tap to create and manage their own.",
+              "Each event keeps its own participant list, from open pickup games to organized tournaments."
+            ]
+          },
+          "screens": {
+            "images": [
+              "The BóJogar home screen listing a user's created and joined sports events",
+              "The events screen listing active sports events nearby, with a search bar",
+              "An event's detail screen showing its location, time and list of participants",
+              "The locations screen showing sports venues on a map with their scheduled events"
+            ]
+          }
+        }
+      },
       "seelect": {
         "title": "SEELECT",
         "meta": "Logistics Coordinator @ SEELECT — Semana Acadêmica — 2023–2024",
@@ -136,53 +206,6 @@
     },
     "punchline": "Let's talk about what really matters.",
     "punchlineSubtitle": "Real problems, shipped to production — here's what I've actually built."
-  },
-  "science": {
-    "punchline": "Some of it's research, not just code.",
-    "punchlineSubtitle": "Peer-reviewed work from my time at GTEL, UFC's wireless research group.",
-    "readPaperCta": "Read the paper",
-    "items": {
-      "rayTracing": {
-        "title": "Ray Tracing Channel Generation for 6G",
-        "imageAlt": "Illustration of a rooftop antenna emitting glowing signal rays across stylized city buildings toward a mobile receiver",
-        "meta": "Undergraduate Researcher @ GTEL, UFC — SBrT 2024",
-        "pitch": "A methodology for generating physically accurate 6G channel data with ray tracing — a real street in Fortaleza, a real base-station position, and moving vehicles and pedestrians, instead of a statistical channel model.",
-        "stack": [
-          "OpenStreetMap",
-          "Blender",
-          "SUMO",
-          "Sionna",
-          "NVIDIA",
-          "Python"
-        ],
-        "topics": {
-          "scenario": {
-            "lines": [
-              "The methodology starts from a real bounding box pulled from OpenStreetMap, not a synthetic layout.",
-              "Blender turns that OSM data into a 3D model of the actual street, buildings included."
-            ]
-          },
-          "mobility": {
-            "lines": [
-              "SUMO simulates realistic vehicle and pedestrian trajectories inside that same area, traffic lights included.",
-              "Those trajectories become the moving receivers the ray tracer tracks over time."
-            ]
-          },
-          "channel": {
-            "lines": [
-              "Sionna ray-traces every path between transmitter and receiver across the 3D scene to build the channel impulse response.",
-              "The base station's coordinates came straight from Anatel's public coverage database, not a hypothetical placement."
-            ]
-          },
-          "results": {
-            "lines": [
-              "Tested on a real street in Fortaleza with a fixed base station and a UAV-mounted one, the number of propagation paths kept shifting second to second.",
-              "That's the point: a statistical channel model assumes a fixed number of paths — this shows why scenario-dependent 6G research needs ray tracing instead."
-            ]
-          }
-        }
-      }
-    }
   },
   "skills": {
     "punchline": "The toolbox behind all of it.",

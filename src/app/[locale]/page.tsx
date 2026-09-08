@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { OtherProjectsSection } from "@/components/sections/OtherProjectsSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { ScienceSection } from "@/components/sections/ScienceSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { BackgroundPattern } from "@/components/background-pattern";
 import { CustomCursor } from "@/components/custom-cursor";
@@ -23,7 +23,7 @@ export default async function HomePage({
       <HeroSection locale={locale} />
       <AboutSection />
       <ProjectsSection locale={locale} />
-      <ScienceSection locale={locale} />
+      <OtherProjectsSection locale={locale} />
       <SkillsSection locale={locale} />
     </main>
   );

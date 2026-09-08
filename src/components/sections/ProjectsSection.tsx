@@ -1,3 +1,4 @@
+import { BoJogarStack } from "@/components/bo-jogar-stack";
 import { ProjectsStack } from "@/components/projects-stack";
 import { SeelectStack } from "@/components/seelect-stack";
 import { getServerTranslation } from "@/i18n/server";
@@ -17,6 +18,7 @@ export async function ProjectsSection({ locale }: { locale: Locale }) {
         </p>
       </div>
       <ProjectsStack />
+      <BoJogarStack />
       <SeelectStack />
     </section>
   );
