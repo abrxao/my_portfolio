@@ -40,6 +40,7 @@
     "punchline": "There's more where that came from.",
     "punchlineSubtitle": "Research, side projects, and whatever's brewing next.",
     "readPaperCta": "Read the paper",
+    "viewCodeCta": "View the code",
     "items": {
       "rayTracing": {
         "title": "Ray Tracing Channel Generation for 6G",
@@ -53,6 +54,31 @@
           "Sionna",
           "NVIDIA",
           "Python"
+        ]
+      },
+      "sudoku": {
+        "title": "Sudoku Assistant Pro",
+        "imageAlt": "Screenshot of a Sudoku grid with pencil-mark candidate numbers in the Sudoku Assistant Qt desktop app",
+        "meta": "Engineering Project @ ENSICAEN",
+        "pitch": "A native Sudoku solver and player built with Qt6 and C++17, following strict MVP architecture — pencil-mark candidates are painted directly onto cells through a custom delegate instead of nested widgets, and the UI switches between English and French at runtime.",
+        "stack": [
+          "Qt6",
+          "C++17",
+          "CMake",
+          "MVP"
+        ]
+      },
+      "tortoise": {
+        "title": "Tortoise World",
+        "imageAlt": "Top-down grid game screenshot showing a tortoise agent, lettuce, water and rocks scattered across a yellow arena, with a dog roaming nearby",
+        "meta": "AI Course Project @ ENSICAEN — with",
+        "collaborator": "Paulo de Meneses",
+        "pitch": "A rational agent that has to eat every lettuce in an N×N grid while staying alive — A* search with a cost function that repels it from a roaming dog, and a priority-based finite state machine that decides when to interrupt the hunt to drink.",
+        "stack": [
+          "Python",
+          "Tkinter",
+          "A* Search",
+          "Finite State Machine"
         ]
       },
       "nextProject": {

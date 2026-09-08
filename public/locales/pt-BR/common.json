@@ -40,6 +40,7 @@
     "punchline": "Sempre tem mais alguma coisa a caminho.",
     "punchlineSubtitle": "Pesquisa, projetos pessoais e o que estiver por vir.",
     "readPaperCta": "Ler o artigo",
+    "viewCodeCta": "Ver o código",
     "items": {
       "rayTracing": {
         "title": "Geração de canais por ray tracing para 6G",
@@ -53,6 +54,31 @@
           "Sionna",
           "NVIDIA",
           "Python"
+        ]
+      },
+      "sudoku": {
+        "title": "Sudoku Assistant Pro",
+        "imageAlt": "Captura de tela de uma grade de Sudoku com números-candidato a lápis no app desktop Sudoku Assistant, feito em Qt",
+        "meta": "Projeto de Engenharia @ ENSICAEN",
+        "pitch": "Um solver e jogo de Sudoku nativo feito com Qt6 e C++17, seguindo arquitetura MVP rigorosa — os candidatos a lápis são desenhados diretamente nas células por um delegate customizado em vez de widgets aninhados, e a interface alterna entre inglês e francês em tempo real.",
+        "stack": [
+          "Qt6",
+          "C++17",
+          "CMake",
+          "MVP"
+        ]
+      },
+      "tortoise": {
+        "title": "Tortoise World",
+        "imageAlt": "Captura de tela de um jogo em grade vista de cima mostrando um agente tartaruga, alfaces, água e pedras espalhadas por uma arena amarela, com um cachorro rondando por perto",
+        "meta": "Projeto de IA @ ENSICAEN — com",
+        "collaborator": "Paulo de Meneses",
+        "pitch": "Um agente racional que precisa comer todas as alfaces de uma grade N×N sem morrer — busca A* com uma função de custo que o repele de um cachorro em movimento, e uma máquina de estados finitos baseada em prioridades que decide quando interromper a caçada para beber água.",
+        "stack": [
+          "Python",
+          "Tkinter",
+          "Busca A*",
+          "Máquina de Estados Finitos"
         ]
       },
       "nextProject": {

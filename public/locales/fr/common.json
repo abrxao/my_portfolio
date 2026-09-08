@@ -40,6 +40,7 @@
     "punchline": "Il y en a d'autres en réserve.",
     "punchlineSubtitle": "Recherche, projets personnels, et ce qui arrive ensuite.",
     "readPaperCta": "Lire l'article",
+    "viewCodeCta": "Voir le code",
     "items": {
       "rayTracing": {
         "title": "Génération de canaux par ray tracing pour la 6G",
@@ -53,6 +54,31 @@
           "Sionna",
           "NVIDIA",
           "Python"
+        ]
+      },
+      "sudoku": {
+        "title": "Sudoku Assistant Pro",
+        "imageAlt": "Capture d'écran d'une grille de Sudoku avec des candidats au crayon dans l'application de bureau Sudoku Assistant, faite avec Qt",
+        "meta": "Projet d'ingénierie @ ENSICAEN",
+        "pitch": "Un solveur et jeu de Sudoku natif construit avec Qt6 et C++17, suivant une architecture MVP stricte — les candidats au crayon sont dessinés directement sur les cellules via un delegate personnalisé plutôt que des widgets imbriqués, et l'interface bascule entre l'anglais et le français en temps réel.",
+        "stack": [
+          "Qt6",
+          "C++17",
+          "CMake",
+          "MVP"
+        ]
+      },
+      "tortoise": {
+        "title": "Tortoise World",
+        "imageAlt": "Capture d'écran d'un jeu en grille vue de dessus montrant un agent tortue, des laitues, de l'eau et des pierres dispersées dans une arène jaune, avec un chien rôdant à proximité",
+        "meta": "Projet d'IA @ ENSICAEN — avec",
+        "collaborator": "Paulo de Meneses",
+        "pitch": "Un agent rationnel qui doit manger toutes les laitues d'une grille N×N tout en restant en vie — recherche A* avec une fonction de coût qui le repousse d'un chien en mouvement, et une machine à états finis basée sur des priorités qui décide quand interrompre la chasse pour boire.",
+        "stack": [
+          "Python",
+          "Tkinter",
+          "Recherche A*",
+          "Machine à états finis"
         ]
       },
       "nextProject": {

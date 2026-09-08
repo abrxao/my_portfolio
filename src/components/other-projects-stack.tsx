@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Hammer } from "lucide-react";
+import { ArrowUpRight, GitGraphIcon, Hammer } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +18,12 @@ import { useTranslation } from "@/i18n/client";
 export function OtherProjectsStack() {
   const { t } = useTranslation();
   const stack = t("otherProjects.items.rayTracing.stack", {
+    returnObjects: true,
+  }) as string[];
+  const sudokuStack = t("otherProjects.items.sudoku.stack", {
+    returnObjects: true,
+  }) as string[];
+  const tortoiseStack = t("otherProjects.items.tortoise.stack", {
     returnObjects: true,
   }) as string[];
 
@@ -64,6 +70,88 @@ export function OtherProjectsStack() {
               {t("otherProjects.readPaperCta")}
               <ArrowUpRight className="size-3.5" />
             </Link>
+          </WindowCardContent>
+        </WindowCard>,
+
+        <WindowCard key="sudoku">
+          <WindowCardHeader>sudoku_assistant.cpp</WindowCardHeader>
+          <WindowCardContent className="space-y-3">
+            <div className="border-border/60 relative h-20 w-full overflow-hidden rounded-md border md:h-24">
+              <Image
+                src="/sudoku-1.webp"
+                alt={t("otherProjects.items.sudoku.imageAlt")}
+                fill
+                sizes="(min-width: 768px) 500px, 90vw"
+                className="zoom-150 object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight md:text-xl">
+                {t("otherProjects.items.sudoku.title")}
+              </h3>
+              <p className="text-muted-foreground mt-0.5 font-mono text-xs">
+                {t("otherProjects.items.sudoku.meta")}
+              </p>
+            </div>
+            <p className="text-sm leading-snug">
+              {t("otherProjects.items.sudoku.pitch")}
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-0.5">
+              {sudokuStack.map((tech) => (
+                <Badge key={tech} variant="secondary">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
+            <Link
+              href="https://github.com/abrxao/sudoku"
+              target="_blank"
+              className="text-primary inline-flex items-center gap-1 text-sm font-medium hover:underline"
+            >
+              {t("otherProjects.viewCodeCta")}
+              <ArrowUpRight className="size-3.5" />
+            </Link>
+          </WindowCardContent>
+        </WindowCard>,
+
+        <WindowCard key="tortoise">
+          <WindowCardHeader>tortoise_world.py</WindowCardHeader>
+          <WindowCardContent className="space-y-3">
+            <div className="border-border/60 relative h-20 w-full overflow-hidden rounded-md border md:h-24">
+              <Image
+                src="/tortoise-1.webp"
+                alt={t("otherProjects.items.tortoise.imageAlt")}
+                fill
+                sizes="(min-width: 768px) 500px, 90vw"
+                className="zoom-150 object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight md:text-xl">
+                {t("otherProjects.items.tortoise.title")}
+              </h3>
+              <p className="text-muted-foreground flex font-mono text-xs">
+                {t("otherProjects.items.tortoise.meta")}{" "}
+                <Link
+                  href="https://github.com/pauloDiego-sudo"
+                  target="_blank"
+                  className="text-primary inline-flex items-center gap-0.5 pl-1 hover:underline"
+                >
+                  <GitGraphIcon className="size-3" />
+                  {t("otherProjects.items.tortoise.collaborator")}
+                </Link>
+              </p>
+            </div>
+            <p className="text-sm leading-snug">
+              {t("otherProjects.items.tortoise.pitch")}
+            </p>
+            <div className="flex flex-wrap gap-1.5 pt-0.5">
+              {tortoiseStack.map((tech) => (
+                <Badge key={tech} variant="secondary">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
           </WindowCardContent>
         </WindowCard>,
 
