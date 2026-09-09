@@ -130,7 +130,7 @@ export function OtherProjectsStack() {
               <h3 className="text-lg font-semibold tracking-tight md:text-xl">
                 {t("otherProjects.items.tortoise.title")}
               </h3>
-              <p className="text-muted-foreground flex font-mono text-xs">
+              <p className="text-muted-foreground flex flex-wrap font-mono text-xs">
                 {t("otherProjects.items.tortoise.meta")}{" "}
                 <Link
                   href="https://github.com/pauloDiego-sudo"
