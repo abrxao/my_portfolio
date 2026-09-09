@@ -11,12 +11,9 @@ export function Header() {
   const { t, locale } = useTranslation();
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full">
+    <header className="fixed top-0 left-0 z-50 w-full backdrop-blur-xs">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link
-          href={`/${locale}#home`}
-          className="text-xl font-bold tracking-tight"
-        >
+        <Link href={`/${locale}`} className="text-xl font-bold tracking-tight">
           Abraão A.
         </Link>
 
