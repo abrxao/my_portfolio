@@ -92,6 +92,15 @@
       "Sou especializado em Cibersegurança & E-payment, e gosto de construir aplicações full-stack seguras e eficientes.",
       "Atualmente trabalhando com React, Next.js, TypeScript e Python — veja o que estou construindo na seção de Projetos abaixo."
     ],
+    "currentlyReading": {
+      "author": "Platão",
+      "imageAlt": "Capa de A República, de Platão",
+      "lines": [
+        "Já tinha lido antes — agora estou relendo em francês para praticar o idioma.",
+        "É um livro em que, lendo com espírito crítico, dá pra encontrar vários padrões do mundo atual, mesmo tendo sido escrito séculos antes de Cristo."
+      ],
+      "title": "La République"
+    },
     "hobbies": [
       "Jogar futebol",
       "Andar de bicicleta",

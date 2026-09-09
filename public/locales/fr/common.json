@@ -92,6 +92,15 @@
       "Je me spécialise en Cybersécurité & E-paiement, et j'aime construire des applications full-stack sécurisées et efficaces.",
       "Je travaille actuellement avec React, Next.js, TypeScript et Python — découvrez mes projets ci-dessous."
     ],
+    "currentlyReading": {
+      "author": "Platon",
+      "imageAlt": "Couverture de La République de Platon",
+      "lines": [
+        "Je l'avais déjà lu une fois — je le relis maintenant en français pour progresser dans la langue.",
+        "C'est un livre où, lu avec un œil critique, on retrouve sans cesse des schémas de notre époque, alors qu'il a été écrit des siècles avant Jésus-Christ."
+      ],
+      "title": "La République"
+    },
     "hobbies": [
       "Jouer au football",
       "Faire du vélo",

@@ -92,6 +92,15 @@
       "I specialize in Cybersecurity & E-payment, and I like building secure, efficient full-stack applications.",
       "Currently working with React, Next.js, TypeScript and Python — see what I'm building in the Projects section below."
     ],
+    "currentlyReading": {
+      "author": "Plato",
+      "imageAlt": "Cover of La République by Plato",
+      "lines": [
+        "I'd already read it before — now I'm going through it again in French, to practice the language.",
+        "It's one of those books where, if you read it critically, you keep matching patterns to modern life, even though it was written centuries before Christ."
+      ],
+      "title": "La République"
+    },
     "hobbies": [
       "Playing football",
       "Riding my bike",

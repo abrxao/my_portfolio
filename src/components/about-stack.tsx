@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Bike, BookOpen, Gamepad2, Goal } from "lucide-react";
+import Image from "next/image";
 import { useSyncExternalStore } from "react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -39,9 +40,12 @@ export function AboutStack() {
   const hobbies = t("presentation.hobbies", {
     returnObjects: true,
   }) as string[];
+  const readingLines = t("presentation.currentlyReading.lines", {
+    returnObjects: true,
+  }) as string[];
 
   return (
-    <ScrollStack count={4} className="md:min-h-140 md:max-w-4xl">
+    <ScrollStack count={5} className="md:min-h-140 md:max-w-4xl">
       {/* Description: left, ~60% width on desktop. Extra right/bottom
           padding leaves room for the overlay cards below to sit on top of
           it without covering the text. */}
@@ -133,6 +137,44 @@ export function AboutStack() {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             />
+          </WindowCardContent>
+        </WindowCard>
+      </ScrollStackItem>
+
+      <ScrollStackItem
+        index={4}
+        className="md:inset-x-auto md:top-[8%] md:left-[18%] md:w-[42%]"
+      >
+        <WindowCard>
+          <WindowCardHeader>currently-reading</WindowCardHeader>
+          <WindowCardContent className="flex gap-3">
+            <div className="border-border/60 relative aspect-2/3 w-16 shrink-0 overflow-hidden rounded-md border md:w-20">
+              <Image
+                src="/la-republique.webp"
+                alt={t("presentation.currentlyReading.imageAlt")}
+                fill
+                sizes="80px"
+                className="object-cover"
+              />
+            </div>
+            <div className="min-w-0 space-y-2">
+              <p className="font-mono text-sm font-medium">
+                {t("presentation.currentlyReading.title")}
+                <span className="text-muted-foreground font-normal">
+                  {" "}
+                  — {t("presentation.currentlyReading.author")}
+                </span>
+              </p>
+              {readingLines.map((line, index) => (
+                <WindowCardLine
+                  key={index}
+                  index={index + 1}
+                  className="text-sm leading-snug"
+                >
+                  {line}
+                </WindowCardLine>
+              ))}
+            </div>
           </WindowCardContent>
         </WindowCard>
       </ScrollStackItem>
