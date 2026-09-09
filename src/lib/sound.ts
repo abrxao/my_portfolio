@@ -72,7 +72,10 @@ export function playTone(tone: Tone) {
   osc.type = tone.type;
   osc.frequency.setValueAtTime(tone.freq, now);
   if (tone.freqTo !== undefined) {
-    osc.frequency.exponentialRampToValueAtTime(tone.freqTo, now + tone.duration);
+    osc.frequency.exponentialRampToValueAtTime(
+      tone.freqTo,
+      now + tone.duration
+    );
   }
 
   gain.gain.setValueAtTime(0, now);
@@ -86,6 +89,47 @@ export function playTone(tone: Tone) {
 
   osc.start(now);
   osc.stop(now + tone.duration + 0.02);
+}
+
+const sampleBuffers = new Map<string, Promise<AudioBuffer | null>>();
+
+function loadSample(
+  audioCtx: AudioContext,
+  url: string
+): Promise<AudioBuffer | null> {
+  const cached = sampleBuffers.get(url);
+  if (cached) return cached;
+
+  const load = fetch(url)
+    .then((res) => res.arrayBuffer())
+    .then((data) => audioCtx.decodeAudioData(data))
+    .catch(() => null);
+  sampleBuffers.set(url, load);
+  return load;
+}
+
+// For pre-recorded one-shots (a real swipe/whoosh sample) rather than the
+// synthesized Tone/ShepardSweep above. Buffers are fetched once and cached
+// by URL; each call still gets its own source/gain pair so rapid repeated
+// triggers never fight over playback state.
+export function playSample(url: string, gain = 1) {
+  const audioCtx = getContext();
+  if (!audioCtx || audioCtx.state !== "running") return;
+
+  void loadSample(audioCtx, url).then((buffer) => {
+    if (!buffer) return;
+    const source = audioCtx.createBufferSource();
+    const gainNode = audioCtx.createGain();
+    source.buffer = buffer;
+    gainNode.gain.value = gain;
+    source.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    source.onended = () => {
+      source.disconnect();
+      gainNode.disconnect();
+    };
+    source.start();
+  });
 }
 
 export interface ShepardSweep {

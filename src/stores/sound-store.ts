@@ -13,7 +13,7 @@ interface SoundStore {
 export const useSoundStore = create<SoundStore>()(
   persist(
     (set) => ({
-      enabled: false,
+      enabled: true,
       setEnabled: (enabled) => set({ enabled }),
     }),
     { name: "sound-enabled" }

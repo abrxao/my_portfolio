@@ -5,13 +5,14 @@ import { motion, type PanInfo } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { isSoundEnabled } from "@/hooks/use-sound-enabled";
-import { playTone } from "@/lib/sound";
-import { cardEnter, cardExit } from "@/lib/sound-palette";
+import { playSample } from "@/lib/sound";
 import { cn } from "@/lib/utils";
 
 const VISIBLE_LAYERS = 3;
 const DRAG_COMMIT_DISTANCE = 80;
 const DRAG_COMMIT_VELOCITY = 400;
+const SWIPE_SOUND_URL = "/floraphonic-movement-swipe-whoosh-3-186577.mp3";
+const SWIPE_SOUND_GAIN = 0.25;
 
 // Indexed by offset from the active card (0 = front). Cards fan out to
 // alternating sides rather than shrinking in place, since a same-width card
@@ -48,8 +49,12 @@ export function StackedCarousel({
   const count = items.length;
   const layerCount = Math.min(VISIBLE_LAYERS, count);
 
-  const go = (direction: 1 | -1) =>
+  // Sound plays here so every way of passing a card - dragging it off, or
+  // clicking the prev/next buttons - gets the same cue.
+  const go = (direction: 1 | -1) => {
     setActiveIndex((current) => (current + direction + count) % count);
+    if (isSoundEnabled()) playSample(SWIPE_SOUND_URL, SWIPE_SOUND_GAIN);
+  };
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
     if (
@@ -57,13 +62,11 @@ export function StackedCarousel({
       info.velocity.x < -DRAG_COMMIT_VELOCITY
     ) {
       go(1);
-      if (isSoundEnabled()) playTone(cardExit);
     } else if (
       info.offset.x > DRAG_COMMIT_DISTANCE ||
       info.velocity.x > DRAG_COMMIT_VELOCITY
     ) {
       go(-1);
-      if (isSoundEnabled()) playTone(cardEnter);
     }
   };
 

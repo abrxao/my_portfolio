@@ -1,4 +1,7 @@
 import type { IconType } from "react-icons";
+import { isSoundEnabled } from "@/hooks/use-sound-enabled";
+import { playTone } from "@/lib/sound";
+import { hoverTick } from "@/lib/sound-palette";
 import { cn } from "@/lib/utils";
 
 export function SkillCard({
@@ -11,7 +14,12 @@ export function SkillCard({
   color?: string;
 }) {
   return (
-    <div className="group relative flex flex-col items-center gap-1.5">
+    <div
+      className="group relative flex flex-col items-center gap-1.5"
+      onMouseEnter={() => {
+        if (isSoundEnabled()) playTone(hoverTick);
+      }}
+    >
       <div
         className={cn(
           "bg-card flex size-14 items-center justify-center rounded-xl border shadow-sm transition-transform duration-300 group-hover:z-10 group-hover:scale-125",
