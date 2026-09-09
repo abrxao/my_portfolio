@@ -39,6 +39,11 @@ interface ParticlesProps {
   color?: string;
   vx?: number;
   vy?: number;
+  /** Lower/upper bound of each particle's random peak opacity. */
+  minAlpha?: number;
+  maxAlpha?: number;
+  /** Magnitude of each particle's random per-frame jitter (its baseline drift, before vx/vy or mouse magnetism). */
+  drift?: number;
 }
 function hexToRgb(hex: string): number[] {
   hex = hex.replace("#", "");
@@ -67,6 +72,9 @@ const Particles: React.FC<ParticlesProps> = ({
   color = "#ffffff",
   vx = 0,
   vy = 0,
+  minAlpha = 0.1,
+  maxAlpha = 0.7,
+  drift = 0.1,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
@@ -150,9 +158,11 @@ const Particles: React.FC<ParticlesProps> = ({
     const translateY = 0;
     const pSize = Math.floor(Math.random() * 2) + size;
     const alpha = 0;
-    const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
-    const dx = (Math.random() - 0.5) * 0.1;
-    const dy = (Math.random() - 0.5) * 0.1;
+    const targetAlpha = parseFloat(
+      (minAlpha + Math.random() * (maxAlpha - minAlpha)).toFixed(2),
+    );
+    const dx = (Math.random() - 0.5) * drift;
+    const dy = (Math.random() - 0.5) * drift;
     const magnetism = 0.1 + Math.random() * 4;
     return {
       x,
