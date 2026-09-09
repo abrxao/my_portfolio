@@ -69,12 +69,7 @@
         "imageAlt": "Capture d'écran d'une grille de Sudoku avec des candidats au crayon dans l'application de bureau Sudoku Assistant, faite avec Qt",
         "meta": "Projet d'ingénierie @ ENSICAEN",
         "pitch": "Un solveur et jeu de Sudoku natif construit avec Qt6 et C++17, suivant une architecture MVP stricte — les candidats au crayon sont dessinés directement sur les cellules via un delegate personnalisé plutôt que des widgets imbriqués, et l'interface bascule entre l'anglais et le français en temps réel.",
-        "stack": [
-          "Qt6",
-          "C++17",
-          "CMake",
-          "MVP"
-        ]
+        "stack": ["Qt6", "C++17", "CMake", "MVP"]
       },
       "tortoise": {
         "title": "Tortoise World",
@@ -82,12 +77,7 @@
         "meta": "Projet d'IA @ ENSICAEN — avec",
         "collaborator": "Paulo de Meneses",
         "pitch": "Un agent rationnel qui doit manger toutes les laitues d'une grille N×N tout en restant en vie — recherche A* avec une fonction de coût qui le repousse d'un chien en mouvement, et une machine à états finis basée sur des priorités qui décide quand interrompre la chasse pour boire.",
-        "stack": [
-          "Python",
-          "Tkinter",
-          "Recherche A*",
-          "Machine à états finis"
-        ]
+        "stack": ["Python", "Tkinter", "Recherche A*", "Machine à états finis"]
       },
       "nextProject": {
         "title": "Prochain projet",
@@ -161,13 +151,8 @@
         "title": "BóJogar",
         "imageAlt": "Capture d'écran de l'application iOS BóJogar montrant le fil des événements sportifs de l'utilisateur",
         "meta": "App iOS + API @ Apple Developer Academy",
-        "pitch": "Une application d'événements sportifs pour ceux qui viennent d'emménager dans une nouvelle ville — un fil de matchs à proximité à rejoindre, et les outils pour créer et gérer les siens. L'application SwiftUI et son API Node.js, construites de bout en bout en solo.",
-        "stack": [
-          "SwiftUI",
-          "Node.js",
-          "TypeScript",
-          "MongoDB"
-        ],
+        "pitch": "Une application d'événements sportifs pour ceux qui viennent d'emménager dans une nouvelle ville — un fil de matchs à proximité à rejoindre, et les outils pour créer et gérer les siens. L'application SwiftUI et son API Node.js, construites de bout en bout.",
+        "stack": ["SwiftUI", "Node.js", "TypeScript", "MongoDB"],
         "topics": {
           "scenario": {
             "lines": [
@@ -200,13 +185,8 @@
       "seelect": {
         "title": "SEELECT",
         "meta": "Coordinateur logistique @ SEELECT — Semana Acadêmica — 2023–2024",
-        "pitch": "En tant que coordinateur logistique d'une semaine académique de 200+ participants, j'ai construit moi-même la plateforme d'inscription — une application full-stack pour gérer les inscriptions, les paiements et la présence en direct, utilisée au quotidien par une équipe de 10 personnes.",
-        "stack": [
-          "React",
-          "Node.js",
-          "Django",
-          "SQLite"
-        ],
+        "pitch": "En tant que coordinateur logistique d'une semaine académique de 200+ participants, j'ai construit la plateforme d'inscription — une application full-stack pour gérer les inscriptions, les paiements et la présence en direct, utilisée au quotidien par une équipe de 10 personnes.",
+        "stack": ["React", "Node.js", "Django", "SQLite"],
         "topics": {
           "api": {
             "lines": [

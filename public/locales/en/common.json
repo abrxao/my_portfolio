@@ -69,12 +69,7 @@
         "imageAlt": "Screenshot of a Sudoku grid with pencil-mark candidate numbers in the Sudoku Assistant Qt desktop app",
         "meta": "Engineering Project @ ENSICAEN",
         "pitch": "A native Sudoku solver and player built with Qt6 and C++17, following strict MVP architecture — pencil-mark candidates are painted directly onto cells through a custom delegate instead of nested widgets, and the UI switches between English and French at runtime.",
-        "stack": [
-          "Qt6",
-          "C++17",
-          "CMake",
-          "MVP"
-        ]
+        "stack": ["Qt6", "C++17", "CMake", "MVP"]
       },
       "tortoise": {
         "title": "Tortoise World",
@@ -82,12 +77,7 @@
         "meta": "AI Course Project @ ENSICAEN — with",
         "collaborator": "Paulo de Meneses",
         "pitch": "A rational agent that has to eat every lettuce in an N×N grid while staying alive — A* search with a cost function that repels it from a roaming dog, and a priority-based finite state machine that decides when to interrupt the hunt to drink.",
-        "stack": [
-          "Python",
-          "Tkinter",
-          "A* Search",
-          "Finite State Machine"
-        ]
+        "stack": ["Python", "Tkinter", "A* Search", "Finite State Machine"]
       },
       "nextProject": {
         "title": "Next Build",
@@ -161,13 +151,8 @@
         "title": "BóJogar",
         "imageAlt": "Screenshot of the BóJogar iOS app's home feed listing a user's sports events",
         "meta": "iOS App + API @ Apple Developer Academy",
-        "pitch": "A sports-events app for people who just moved somewhere new — a feed of nearby games to join, and the tools to create and run your own. The SwiftUI app and its Node.js API, built end-to-end solo.",
-        "stack": [
-          "SwiftUI",
-          "Node.js",
-          "TypeScript",
-          "MongoDB"
-        ],
+        "pitch": "A sports-events app for people who just moved somewhere new — a feed of nearby games to join, and the tools to create and run your own. The SwiftUI app and its Node.js API, built end-to-end.",
+        "stack": ["SwiftUI", "Node.js", "TypeScript", "MongoDB"],
         "topics": {
           "scenario": {
             "lines": [
@@ -200,13 +185,8 @@
       "seelect": {
         "title": "SEELECT",
         "meta": "Logistics Coordinator @ SEELECT — Semana Acadêmica — 2023–2024",
-        "pitch": "As logistics coordinator for a 200+ person academic week, I built the registration platform myself — a full-stack app to handle sign-ups, payments and live attendance, run day-to-day by a 10-person team.",
-        "stack": [
-          "React",
-          "Node.js",
-          "Django",
-          "SQLite"
-        ],
+        "pitch": "As logistics coordinator for a 200+ person academic week, I built the registration platform — a full-stack app to handle sign-ups, payments and live attendance, run day-to-day by a 10-person team.",
+        "stack": ["React", "Node.js", "Django", "SQLite"],
         "topics": {
           "api": {
             "lines": [
