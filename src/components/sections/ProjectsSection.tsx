@@ -17,9 +17,15 @@ export async function ProjectsSection({ locale }: { locale: Locale }) {
           {t("projects.punchlineSubtitle")}
         </p>
       </div>
-      <ProjectsStack />
-      <BoJogarStack />
-      <SeelectStack />
+      <div id="project-chamber-orchestra">
+        <ProjectsStack />
+      </div>
+      <div id="project-bojogar">
+        <BoJogarStack />
+      </div>
+      <div id="project-seelect">
+        <SeelectStack />
+      </div>
     </section>
   );
 }

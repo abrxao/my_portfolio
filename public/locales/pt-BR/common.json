@@ -1,8 +1,16 @@
 {
   "footer": {
     "cursorPosition": "Posição do cursor",
+    "dragHint": "Arraste ou toque na barra para pular para qualquer seção",
     "localTime": "Horário local",
-    "scrollProgress": "Progresso da página"
+    "scrollHint": "Role para ver mais",
+    "scrollProgress": "Progresso da página",
+    "sections": {
+      "about": "Sobre",
+      "home": "Início",
+      "otherProjects": "Outros projetos",
+      "skills": "Habilidades"
+    }
   },
   "gallery": {
     "goToImage": "Ir para a imagem {{index}}",

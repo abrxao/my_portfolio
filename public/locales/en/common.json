@@ -1,8 +1,16 @@
 {
   "footer": {
     "cursorPosition": "Cursor position",
+    "dragHint": "Drag or tap the bar to jump to any section",
     "localTime": "Local time",
-    "scrollProgress": "Page scroll progress"
+    "scrollHint": "Scroll to view more",
+    "scrollProgress": "Page scroll progress",
+    "sections": {
+      "about": "About",
+      "home": "Home",
+      "otherProjects": "Side projects",
+      "skills": "Skills"
+    }
   },
   "gallery": {
     "goToImage": "Go to image {{index}}",

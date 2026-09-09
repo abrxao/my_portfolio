@@ -1,8 +1,16 @@
 {
   "footer": {
     "cursorPosition": "Position du curseur",
+    "dragHint": "Glissez ou touchez la barre pour aller à une autre section",
     "localTime": "Heure locale",
-    "scrollProgress": "Progression de la page"
+    "scrollHint": "Faites défiler pour en voir plus",
+    "scrollProgress": "Progression de la page",
+    "sections": {
+      "about": "À propos",
+      "home": "Accueil",
+      "otherProjects": "Autres projets",
+      "skills": "Compétences"
+    }
   },
   "gallery": {
     "goToImage": "Aller à l'image {{index}}",
