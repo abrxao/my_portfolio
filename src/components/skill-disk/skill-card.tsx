@@ -8,11 +8,15 @@ export function SkillCard({
   name,
   Icon,
   color,
+  className,
 }: {
   name: string;
   Icon: IconType;
   color?: string;
+  className?: string;
 }) {
+  const featured = Boolean(color || className);
+
   return (
     <div
       className="group relative flex flex-col items-center gap-1.5"
@@ -23,27 +27,24 @@ export function SkillCard({
       <div
         className={cn(
           "bg-card flex size-14 items-center justify-center rounded-xl border shadow-sm transition-transform duration-300 group-hover:z-10 group-hover:scale-125",
-          !color && "border-border/60"
+          featured ? className : "border-foreground/20 text-foreground/80"
         )}
         style={
           color
             ? {
                 borderColor: color,
+                color,
                 boxShadow: `0 0 14px color-mix(in oklch, ${color} 40%, transparent)`,
               }
             : undefined
         }
       >
-        <Icon
-          className={cn("size-7", !color && "text-foreground/80")}
-          style={color ? { color } : undefined}
-          aria-hidden="true"
-        />
+        <Icon className="size-7" aria-hidden="true" />
       </div>
       <span
         className={cn(
           "font-mono text-[10px] whitespace-nowrap",
-          color ? "text-foreground" : "text-muted-foreground"
+          featured ? "text-foreground" : "text-muted-foreground"
         )}
       >
         {name}
